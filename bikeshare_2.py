@@ -341,6 +341,24 @@ def user_stats(df):
     print('-'*40)
 
 
+def show_raw_data(df):
+    """
+    Asks the user if they want to view the data as is in the DataFrame
+    Displays the data frame in a tabular data if the user selects 'yes'
+    """
+    index_tracker = 0
+
+    while True:
+            see_individual_trips = input('\nWould you like to view individual trip data?\n \
+                [Y]es \t [N]o\n')
+            if see_individual_trips.lower() in ('yes', 'y'):
+                individual_trips = df.iloc[index_tracker : index_tracker + 5, 2 : ]
+                print(individual_trips)
+                index_tracker += 5
+            else:
+                break
+
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -351,16 +369,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
-        index_tracker = 0
-        while True:
-            see_individual_trips = input('\nWould you like to view individual trip data?\n \
-                [Y]es \t [N]o\n')
-            if see_individual_trips.lower() in ('yes', 'y'):
-                individual_trips = df.iloc[index_tracker : index_tracker + 5, 2 : ]
-                print(individual_trips.head(5))
-                index_tracker += 5
-            else:
-                break
+        show_raw_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
