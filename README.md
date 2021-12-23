@@ -20,5 +20,21 @@ I am expected to include the following files:
 >    [Washington data](https://www.capitalbikeshare.com/system-data)
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
+#### [str.replace()](https://docs.python.org/3/library/stdtypes.html#str.replace)
+
+#### [pandas API Reference:](https://pandas.pydata.org/pandas-docs/stable/reference/index.html)
+
+- [pandas.to_datetime()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html)
+
+- [DatetimeIndex](https://pandas.pydata.org/pandas-docs/stable/reference/indexing.html#datetimeindex)
+    
+- [Datetime data](https://pandas.pydata.org/pandas-docs/stable/reference/arrays.html#datetime-data)
+
+- [Timestamp.day_name()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.day_name.html#pandas.Timestamp.day_name)
+
+- [Timestamp.month_name()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.month_name.html#pandas.Timestamp.month_name)
+
+- [MultiIndex](https://pandas.pydata.org/pandas-docs/stable/reference/indexing.html#multiindex)
+
+- [pandas.DataFrame.to_dict()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_dict.html)
