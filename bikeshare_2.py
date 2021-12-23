@@ -286,26 +286,26 @@ def format_time(time_sec):
     remainder = time_sec
     if (time_sec >  YEAR_SEC) or (time_sec > DAY_SEC) or (time_sec > HOUR_SEC) or (time_sec >= 60):
         if remainder >= YEAR_SEC:
-            time_str += '{} years, '.format(remainder // YEAR_SEC)
+            time_str += '{} years, '.format(int(remainder // YEAR_SEC))
             remainder %= YEAR_SEC
         
         if remainder >= DAY_SEC:
-            time_str += '{} days, '.format(remainder // DAY_SEC)
+            time_str += '{} days, '.format(int(remainder // DAY_SEC))
             remainder %= DAY_SEC
         
         if remainder >= HOUR_SEC:
-            time_str += '{} hours, '.format(remainder // HOUR_SEC)
+            time_str += '{} hours, '.format(int(remainder // HOUR_SEC))
             remainder %= HOUR_SEC
         
         if remainder >= 60:
-            time_str += '{} minutes, '.format(remainder // 60)
+            time_str += '{} minutes, '.format(int(remainder // 60))
             remainder %= 60
 
         if remainder < 60:
-            time_str += 'and {} seconds'.format(remainder)
+            time_str += 'and {} seconds'.format(round(remainder, 2))
     
     else:
-        time_str = '{} seconds'.format(remainder)
+        time_str = '{} seconds'.format(round(remainder, 2))
 
     return time_str
 
