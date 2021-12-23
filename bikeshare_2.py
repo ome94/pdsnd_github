@@ -81,6 +81,13 @@ def get_filters():
 
 
 def get_month():
+    """
+    Asks us to specify a month of choice
+
+    Returns:
+        (str)  month - name of month corresponding to the user's choice 
+        or 'all' if the user so decides at this point.
+    """
     # get user input for month (all, january, february, ... , june)
     while True:
         try:
