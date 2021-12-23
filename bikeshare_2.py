@@ -122,6 +122,14 @@ def get_month():
 
 
 def get_day():
+    """
+    Asks us to specify a day of choice
+
+    Returns:
+        (str)  day - name of day corresponding to the user's choice 
+        or 'all' if the user so decides at this point.
+    """
+
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         try:
