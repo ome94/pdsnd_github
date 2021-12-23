@@ -356,10 +356,9 @@ def main():
             see_individual_trips = input('\nWould you like to view individual trip data?\n \
                 [Y]es \t [N]o\n')
             if see_individual_trips.lower() in ('yes', 'y'):
-                individual_trips = df[index_tracker : index_tracker + 5].to_dict(orient='records')
-                for trip in individual_trips:
-                    print(trip)
-                index_tracker += 4
+                individual_trips = df.iloc[index_tracker : index_tracker + 5, 2 : ]
+                print(individual_trips.head(5))
+                index_tracker += 5
             else:
                 break
 
